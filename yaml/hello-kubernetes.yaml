@@ -5,8 +5,8 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-  - port: 80
-    targetPort: 8080
+    - port: 80
+      targetPort: 8080
   selector:
     app: hello-kubernetes
 ---
@@ -25,7 +25,7 @@ spec:
         app: hello-kubernetes
     spec:
       containers:
-      - name: hello-kubernetes
-        image: paulbouwer/hello-kubernetes:1.7
-        ports:
-        - containerPort: 8080
+        - name: hello-kubernetes
+          image: mingerz/hello-kubernetes:1.7
+          ports:
+            - containerPort: 8080
